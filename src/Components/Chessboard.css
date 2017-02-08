@@ -6,6 +6,21 @@
   float: left;
 }
 
+.CurrentSquare {
+  width: 48px;
+  height: 48px;
+  background: green;
+  border: 1px solid white;
+  float: left;
+}
+
+.VisitedSquare {
+  width: 48px;
+  height: 48px;
+  background: blue;
+  border: 1px solid white;
+  float: left;
+}
 
 .Board {
   text-align: center;

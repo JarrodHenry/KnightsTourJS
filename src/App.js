@@ -15,15 +15,12 @@ class App extends Component {
 
             <Chessboard />
 
-          <button onClick={this.startTour}>Start the tour</button>
+
 
       </div>
     );
   }
-  startTour() {
-    alert("Tour started");
 
-  }
 }
 
 export default App;
