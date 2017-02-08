@@ -39,23 +39,30 @@ class Chessboard extends Component {
     return (
       <div className="Board">
         {rows}
-        <button onClick={this.startTour}>Next Square</button>
+        <button onClick={this.startTour}>Start Tour</button>
         <button onClick={this.resetTour}>Reset</button>
       </div>
     )
   }
 
-  startTour() {
+  sleep(ms) {
+    return new Promise(resolve=>setTimeout(resolve, ms));
+  }
+  async startTour() {
     console.log(this.cb);
+    while (this.state.cb.moves < 63)
+    {
     this.state.cb.makeNextMove();
+    await this.sleep(300);
     this.setState({cb: this.state.cb})
-
+    }
   }
   resetTour() {
     this.state.cb.resetTour();
     this.setState({cb:this.state.cb});
 
   }
+
 }
 
 
