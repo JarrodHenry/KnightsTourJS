@@ -1,0 +1,15 @@
+.Square {
+  width: 48px;
+  height: 48px;
+  background: black;
+  border: 1px solid white;
+  float: left;
+}
+
+
+.Board {
+  text-align: center;
+  width: 400px;
+  height: 400px;
+
+}
