@@ -9,6 +9,7 @@ class Chessboard extends Component {
     //this.cb = new cboard();
     this.state = {cb: new cboard()}
     this.startTour = this.startTour.bind(this);
+    this.resetTour = this.resetTour.bind(this);
   }
 
   render() {
@@ -39,6 +40,7 @@ class Chessboard extends Component {
       <div className="Board">
         {rows}
         <button onClick={this.startTour}>Next Square</button>
+        <button onClick={this.resetTour}>Reset</button>
       </div>
     )
   }
@@ -47,6 +49,11 @@ class Chessboard extends Component {
     console.log(this.cb);
     this.state.cb.makeNextMove();
     this.setState({cb: this.state.cb})
+
+  }
+  resetTour() {
+    this.state.cb.resetTour();
+    this.setState({cb:this.state.cb});
 
   }
 }

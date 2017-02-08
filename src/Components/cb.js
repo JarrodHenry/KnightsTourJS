@@ -118,4 +118,20 @@ module.exports = class cboard {
      this.moves = this.moves + 1;
 
   }
+  resetTour() {
+    this.moves = 0;
+
+
+    // Iniitalize visited
+    this.visited = new Array(new Array());
+    // Initialize visited to false
+    for (var x=0 ; x< 8 ; x++){
+      this.visited[x]=[];
+      for (var y=0; y<8; y++) {
+        this.visited[x][y]=false;
+      }
+    }
+    this.currX = Math.floor(Math.random()*8);
+    this.currY = Math.floor(Math.random()*8);
+  }
 }
