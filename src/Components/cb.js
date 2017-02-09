@@ -86,7 +86,7 @@ module.exports = class cboard {
 
   makeNextMove() {
     // Make next move here
-     if (this.moves >= 63)
+     if (this.moves > 63)
      {
        console.log("finished");
        alert("Finished!")
