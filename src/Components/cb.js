@@ -86,9 +86,11 @@ module.exports = class cboard {
 
   makeNextMove() {
     // Make next move here
-     if (this.moves === 63)
+     if (this.moves >= 63)
      {
+       console.log("finished");
        alert("Finished!")
+       this.moves=600;
        return
      }
      var moveList = this.validMoves(this.getCurrentSquare());
@@ -100,7 +102,7 @@ module.exports = class cboard {
      {
        let moveX = move[0];
        let moveY = move[1];
-       console.log(move);
+
        let moveSquare = moveX + (moveY*8);
        let number = this.validMoves(moveSquare).length;
 
@@ -116,7 +118,7 @@ module.exports = class cboard {
      this.currX = nextX;
      this.currY = nextY;
      this.moves = this.moves + 1;
-
+     console.log(this.moves);
   }
   resetTour() {
     this.moves = 0;

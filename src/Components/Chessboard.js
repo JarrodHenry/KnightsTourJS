@@ -50,7 +50,7 @@ class Chessboard extends Component {
   }
   async startTour() {
     console.log(this.cb);
-    while (this.state.cb.moves < 63)
+    while (this.state.cb.moves <= 64)
     {
     this.state.cb.makeNextMove();
     await this.sleep(300);
